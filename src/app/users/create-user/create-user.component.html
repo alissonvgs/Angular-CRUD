@@ -1,0 +1,25 @@
+<h2>Create user</h2>
+
+<div>
+  <label
+    >Name: <input placeholder="Insert your name" [(ngModel)]="request.name" />
+  </label>
+  <br /><br />
+  <label
+    >Job: <input placeholder="Insert your job" [(ngModel)]="request.job" />
+  </label>
+  <br /><br />
+  <button (click)="save()">Send</button>
+</div>
+
+<br /><br />
+
+<div *ngIf="response">
+  <h1>Succesfully created</h1>
+  <label>Name: {{ response.name }}</label>
+  <br />
+  <label>job: {{ response.job }}</label>
+  <br /><label>Id: {{ response.id }}</label> <br /><label
+    >Created at: {{ response.createdAt }}</label
+  >
+</div>
